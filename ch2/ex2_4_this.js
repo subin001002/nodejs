@@ -20,3 +20,8 @@ logFriends() {
 },
 };
 relationship2.logFriends();
+
+this;
+button.addEventListener('click', (e) => {
+  console.log(this.textContent);
+});
