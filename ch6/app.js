@@ -26,8 +26,11 @@ app.get('*', (req, res) => {
   res.send('Hello, Everybody');
 });
 app.use((err, req, res, next) => {
+  res.status(200).send('에러지롱');
+});
+app.use((err, req, res, next) => {
   console.error(err);
-  res.send('에러남');
+  res.status(200).send('에러남');
 })
 app.listen(app.get('port'), () => {
   console.log('익스프레스 서버 실행');
